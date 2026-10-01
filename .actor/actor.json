@@ -1,0 +1,42 @@
+{
+  "actorSpecification": 1,
+  "name": "linkedin-open-to-work",
+  "title": "LinkedIn Open To Work Status",
+  "description": "Check Open To Work status for LinkedIn profiles in bulk.",
+  "version": "0.0",
+  "buildTag": "latest",
+  "environmentVariables": {},
+  "dockerfile": "./Dockerfile",
+  "input": "./INPUT_SCHEMA.json",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "views": {
+        "overview": {
+          "title": "Results",
+          "transformation": {
+            "fields": [
+              "LinkedIn URL",
+              "Full Name",
+              "Open To Work",
+              "Job Title",
+              "Company",
+              "Location"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "LinkedIn URL":  { "label": "LinkedIn URL",  "format": "link" },
+              "Full Name":     { "label": "Full Name"                       },
+              "Open To Work":  { "label": "Open To Work"                    },
+              "Job Title":     { "label": "Job Title"                       },
+              "Company":       { "label": "Company"                         },
+              "Location":      { "label": "Location"                        }
+            }
+          }
+        }
+      }
+    }
+  }
+}
