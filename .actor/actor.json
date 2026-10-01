@@ -1,39 +1,56 @@
 {
   "actorSpecification": 1,
-  "name": "linkedin-open-to-work",
+  "name": "linkedin-open-to-work-status",
   "title": "LinkedIn Open To Work Status",
-  "description": "Check Open To Work status for LinkedIn profiles in bulk.",
-  "version": "0.0",
-  "buildTag": "latest",
-  "environmentVariables": {},
-  "dockerfile": "./Dockerfile",
-  "input": "./INPUT_SCHEMA.json",
+  "description": "Check Open To Work status for LinkedIn profiles in bulk. No LinkedIn cookies required.",
+  "version": "1.0",
+  "output": {
+    "actorOutputSchemaVersion": 1,
+    "title": "LinkedIn Open To Work Status Output",
+    "description": "LinkedIn profile data including name, headline, location, and Open To Work status.",
+    "properties": {
+      "results": {
+        "type": "string",
+        "title": "LinkedIn Profiles",
+        "template": "{{links.apiDefaultDatasetUrl}}/items"
+      }
+    }
+  },
   "storages": {
     "dataset": {
       "actorSpecification": 1,
       "views": {
         "overview": {
-          "title": "Results",
+          "title": "Overview",
           "transformation": {
             "fields": [
-              "LinkedIn URL",
-              "Full Name",
-              "Open To Work",
-              "Job Title",
-              "Company",
-              "Location"
+              "input_url",
+              "normalized_url",
+              "data_status",
+              "profile_id",
+              "full_name",
+              "first_name",
+              "last_name",
+              "headline",
+              "location",
+              "country_code",
+              "open_to_work",
+              "open_to_work_roles",
+              "profile_url",
+              "followers",
+              "connections",
+              "current_company",
+              "current_title",
+              "industry",
+              "about",
+              "profile_picture",
+              "request_id",
+              "order_id",
+              "processed_at"
             ]
           },
           "display": {
-            "component": "table",
-            "properties": {
-              "LinkedIn URL":  { "label": "LinkedIn URL",  "format": "link" },
-              "Full Name":     { "label": "Full Name"                       },
-              "Open To Work":  { "label": "Open To Work"                    },
-              "Job Title":     { "label": "Job Title"                       },
-              "Company":       { "label": "Company"                         },
-              "Location":      { "label": "Location"                        }
-            }
+            "component": "table"
           }
         }
       }
