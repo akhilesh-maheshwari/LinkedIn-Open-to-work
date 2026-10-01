@@ -1,20 +1,17 @@
 {
   "title": "LinkedIn Open To Work Status",
-  "description": "Check Open To Work status for LinkedIn profiles in bulk.",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
     "fileName": {
       "title": "File Name / Tag",
       "type": "string",
-      "description": "A label for this run (used to name the output file).",
       "editor": "textfield",
       "default": "OTW_Run"
     },
     "profiles": {
       "title": "LinkedIn Profile URL",
       "type": "string",
-      "description": "Single LinkedIn profile URL (https://www.linkedin.com/in/...).",
       "editor": "textfield",
       "default": "https://www.linkedin.com/in/ajjames"
     }
