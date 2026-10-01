@@ -1,0 +1,16 @@
+{
+  "name": "linkedin-open-to-work",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Check Open To Work status for LinkedIn profiles in bulk.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "dependencies": {
+    "apify": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
