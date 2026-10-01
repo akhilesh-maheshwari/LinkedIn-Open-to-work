@@ -1,0 +1,24 @@
+{
+  "title": "LinkedIn Open To Work Status",
+  "description": "Check Open To Work status for LinkedIn profiles in bulk.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "fileName": {
+      "title": "File Name / Tag",
+      "type": "string",
+      "description": "A label for this run (used to name the output file). Required.",
+      "editor": "textfield"
+    },
+    "profiles": {
+      "title": "LinkedIn Profile URLs",
+      "type": "array",
+      "description": "List of LinkedIn profile URLs (https://www.linkedin.com/in/...). One per line.",
+      "editor": "stringList",
+      "prefill": [
+        "https://www.linkedin.com/in/ajjames"
+      ]
+    }
+  },
+  "required": ["fileName", "profiles"]
+}
