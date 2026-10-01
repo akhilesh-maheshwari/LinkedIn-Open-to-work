@@ -7,17 +7,16 @@
     "fileName": {
       "title": "File Name / Tag",
       "type": "string",
-      "description": "A label for this run (used to name the output file). Required.",
-      "editor": "textfield"
+      "description": "A label for this run (used to name the output file).",
+      "editor": "textfield",
+      "default": "OTW_Run"
     },
     "profiles": {
-      "title": "LinkedIn Profile URLs",
-      "type": "array",
-      "description": "List of LinkedIn profile URLs (https://www.linkedin.com/in/...). One per line.",
-      "editor": "stringList",
-      "prefill": [
-        "https://www.linkedin.com/in/ajjames"
-      ]
+      "title": "LinkedIn Profile URL",
+      "type": "string",
+      "description": "Single LinkedIn profile URL (https://www.linkedin.com/in/...).",
+      "editor": "textfield",
+      "default": "https://www.linkedin.com/in/ajjames"
     }
   },
   "required": ["fileName", "profiles"]
