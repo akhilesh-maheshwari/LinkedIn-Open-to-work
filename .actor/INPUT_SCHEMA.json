@@ -6,12 +6,14 @@
     "fileName": {
       "title": "File Name / Tag",
       "type": "string",
+      "description": "A label for this run.",
       "editor": "textfield",
       "default": "OTW_Run"
     },
     "profiles": {
       "title": "LinkedIn Profile URL",
       "type": "string",
+      "description": "LinkedIn profile URL to check Open To Work status.",
       "editor": "textfield",
       "default": "https://www.linkedin.com/in/ajjames"
     }
