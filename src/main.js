@@ -8,15 +8,17 @@ try {
   // 1. GET INPUT
   // ──────────────────────────────
   const input          = await Actor.getInput();
-  const serviceTagName = input.fileName || '';
-  const rawProfiles    = Array.isArray(input.profiles) ? input.profiles : [];
+  const serviceTagName = input.fileName || 'OTW_Run';
+  const rawProfiles    = input.profiles
+    ? [input.profiles].flat().map(u => u?.trim()).filter(Boolean)
+    : [];
 
   const serviceName    = 'LinkedIn Open To Work Status';
   const serviceOption1 = 'linkedin-open-to-work';
   const requestSource  = 'LinkedIn_OTW_AP';
 
-  const boomerangInputUrl = 'https://YOUR_SERVER/webhook/otwapify-input';   // CHANGE
-  const boomerangStatUrl  = 'https://YOUR_SERVER/webhook/otwapify-stats';   // CHANGE
+  const boomerangInputUrl = 'https://YOUR_SERVER/webhook/otwapify-input';
+  const boomerangStatUrl  = 'https://YOUR_SERVER/webhook/otwapify-stats';
 
   console.log('Tag Name  :', serviceTagName);
   console.log('Service   :', serviceName);
