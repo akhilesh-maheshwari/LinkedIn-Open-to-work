@@ -9,9 +9,7 @@ try {
   // ──────────────────────────────
   const input          = await Actor.getInput();
   const serviceTagName = input.fileName || 'OTW_Run';
-  const rawProfiles    = input.profiles
-    ? [input.profiles].flat().map(u => u?.trim()).filter(Boolean)
-    : [];
+  const rawProfiles    = Array.isArray(input.profiles) ? input.profiles : [];
 
   const serviceName    = 'LinkedIn Open To Work Status';
   const serviceOption1 = 'linkedin-open-to-work';
