@@ -11,11 +11,13 @@
       "default": "OTW_Run"
     },
     "profiles": {
-      "title": "LinkedIn Profile URL",
-      "type": "string",
-      "description": "LinkedIn profile URL to check Open To Work status.",
-      "editor": "textfield",
-      "default": "https://www.linkedin.com/in/ajjames"
+      "title": "LinkedIn Profile URLs",
+      "type": "array",
+      "description": "LinkedIn profile URLs to check Open To Work status.",
+      "editor": "stringList",
+      "prefill": [
+        "https://www.linkedin.com/in/ajjames"
+      ]
     }
   },
   "required": ["fileName", "profiles"]
