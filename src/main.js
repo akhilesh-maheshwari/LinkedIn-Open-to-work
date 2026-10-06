@@ -15,8 +15,8 @@ try {
   const serviceOption1 = 'linkedin-open-to-work';
   const requestSource  = 'LinkedIn_OTW_AP';
 
-  const boomerangInputUrl = 'https://YOUR_SERVER/webhook/otwapify-input';
-  const boomerangStatUrl  = 'https://YOUR_SERVER/webhook/otwapify-stats';
+  const boomerangInputUrl = 'https://linkedinprivate-n8n.boomerangserver.co.in/webhook/open-to-work-check-request';
+  const boomerangStatUrl  = 'https://linkedinprivate-n8n.boomerangserver.co.in/webhook/open-to-work-check-stats';
 
   console.log('Tag Name  :', serviceTagName);
   console.log('Service   :', serviceName);
@@ -378,7 +378,7 @@ try {
                 request_id,
                 requestStatus     : 'Error',
                 driveInputLink,
-                boomerangOutputUrl: `https://YOUR_SERVER/webhook/otwapify-output?request_id=${request_id}`,
+                boomerangOutputUrl: `https://linkedinprivate-n8n.boomerangserver.co.in/webhook/open-to-work-check-output?request_id=${request_id}`,
                 batch_number,
                 request_unique_id,
                 batchFolderId,
@@ -417,7 +417,7 @@ try {
         continue;
       }
 
-      const boomerangOutputUrl = `https://YOUR_SERVER/webhook/otwapify-output?request_id=${request_id}`;
+      const boomerangOutputUrl = `https://linkedinprivate-n8n.boomerangserver.co.in/webhook/open-to-work-check-output?request_id=${request_id}`;
 
       let outputLink = '';
       try {
