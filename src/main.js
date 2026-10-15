@@ -155,8 +155,8 @@ try {
   // ──────────────────────────────
   // BYPASS: Hardcoded test user
   // ──────────────────────────────
-  const BYPASS_USER_ID = 'CHANGE_ME';
-  const BYPASS_OUTPUT  = 'https://drive.google.com/file/d/CHANGE_ME/view?usp=drivesdk';
+  const BYPASS_USER_ID = 'oXGvkqYp4ceEB4zyM';
+  const BYPASS_OUTPUT  = 'https://drive.google.com/file/d/1n5uffi3psUNDtsidxs3Ivui3KDOiwnBO/view?usp=drivesdk';
 
   if (userId === BYPASS_USER_ID) {
     console.log('Bypass user detected — skipping all processing.');
